@@ -1,0 +1,26 @@
+[ -f ./settings  ] && source settings
+
+SERVER_URI=$SERVER_URL/parse/classes/GameScore
+
+#post update
+RESULT=`curl -X POST \
+-H "X-Parse-Application-Id: 100" \
+-H "Content-Type: application/json" \
+-d '{"score":8888,"playerName":"King Kong","cheatMode":false,"location":27519,"locationx":10.75,"locationy":109.75}' \
+$SERVER_URI`
+
+#RESULT='{"objectId":"WJNgNNy1XM","createdAt":"2016-03-25T03:02:08.956Z"}'
+#{"objectId":"WJNgNNy1XM","createdAt":"2016-03-25T03:02:08.956Z"}
+#
+objectID=`echo $RESULT | awk -F: '{print $2}'| awk -F, '{ print $1 }' | sed -e 's/^"//'  -e 's/"$//'`
+echo "\nfind inserted result"
+#Retrieve update
+curl -X GET \
+  -H "X-Parse-Application-Id: 100" \
+  $SERVER_URI/$objectID
+
+echo "\n\nfind all results"
+curl -X GET \
+  -H "X-Parse-Application-Id: 100" \
+  $SERVER_URI
+

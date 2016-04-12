@@ -1,0 +1,7 @@
+#npm install -g mongodb-runner
+#mongodb-runner start
+server=$(which parse-server)
+
+[ -z $server ] && npm install -g parse-server
+[ -f ./settings ] && source ./settings
+parse-server --port $PARSEPORT --appId $APPID --masterKey $KEY --databaseURI $DB_URI

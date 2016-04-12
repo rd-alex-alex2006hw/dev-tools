@@ -1,0 +1,2 @@
+[ ! -d ./databasefiles ] && mkdir databasefiles
+mongod --dbpath=`pwd`/databasefiles

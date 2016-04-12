@@ -1,0 +1,7 @@
+DATE=$(date)
+
+iconmaker=$(which mobile-icon-resizer)
+
+[ -z $iconmaker ] && npm install -g mobile-icon-resizer
+
+echo 'mobile-icon-resizer -i appicon_1024.png --iosprefix="Icon" --iosof=output/ios --androidof=output/android --config=custom-sizes.js'
