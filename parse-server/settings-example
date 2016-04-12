@@ -1,4 +1,4 @@
 export PARSEPORT=1337
 export APPID=100
 export KEY=123456
-export DB_URI='mongodb://instragram:instragram-2016@ds017070.mlab.com:17070/instragram'
+export DB_URI='mongodb://localhost:27017/parse-server'
