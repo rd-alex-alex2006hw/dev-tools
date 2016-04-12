@@ -1,1 +1,3 @@
-rethinkdb --directory rethinkdb
+
+[ ! -d ./rethinkdatabase ] && mkdir rethinkdatabase
+rethinkdb --directory `pwd`/rethinkdatabase

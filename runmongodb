@@ -1,2 +1,2 @@
-[ ! -d ./databasefiles ] && mkdir databasefiles
-mongod --dbpath=`pwd`/databasefiles
+[ ! -d ./mongodatabase ] && mkdir mongodatabase
+mongod --dbpath=`pwd`/mongodatabase
