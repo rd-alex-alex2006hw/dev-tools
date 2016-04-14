@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+const generateAppIconset = require('./index');
+const path = require('path');
+
+// you must provide absolute paths for safety
+// const from = path.resolve(__dirname, 'image.png');
+// const to = path.resolve(__dirname, 'Project/Images.xcassets/AppIcon.appiconset')
+
+const from = path.resolve(__dirname, 'icon.png');
+const to = path.resolve(__dirname, 'Icons');
+generateAppIconset(from, to);
