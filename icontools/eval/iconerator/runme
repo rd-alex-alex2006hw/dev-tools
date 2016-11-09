@@ -1,6 +1,0 @@
-DATE=$(date)
-
-localnpm=$(which iconerator)
-[ -z $localnpm ] && npm install -g iconerator
-
-iconerator -h

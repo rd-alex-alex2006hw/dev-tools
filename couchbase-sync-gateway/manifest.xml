@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote    name="couchbase" fetch="git://github.com/couchbase/" />
+    <project remote="couchbase" name="sync_gateway" path="sync_gateway" revision="9df63a56b5e86307593289eee038ed601892c049" />
+</manifest>

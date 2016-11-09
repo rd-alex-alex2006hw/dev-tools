@@ -1,0 +1,7 @@
+#export S3DATAPATH="/Volumes/ALEX2006HW/tmp/data"
+#export S3METADATAPATH="/Volumes/ALEX2006HW/tmp/meta"
+#npm start
+#git checkout dev/ft/KineticBackendClass
+export S3SPROXYD=kinetic
+export S3CONFIG=`pwd`/config.json
+S3BACKEND=mem && npm start

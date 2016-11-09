@@ -1,0 +1,9 @@
+export PARSEPORT=1337
+export APP_ID=100
+export MASTER_KEY=123456
+export SERVER_URL='http://localhost:1337/parse'
+export MONGODB_URI='mongodb://pointlook:pointlook-2016@ds039504.mlab.com:39504/pointlook'
+export S3_ACCESS_KEY="KIAJ7CBESQFV55XVVGQ"
+export S3_SECRET_KEY="uhsPSi8uSfV4ORmMHRckcHSH2M6YyHkqv/+xBDNg"
+export S3_BUCKET="plur-pointlook/"
+export PARSE_UPLOAD="./upload"

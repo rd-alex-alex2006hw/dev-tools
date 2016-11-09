@@ -1,0 +1,18 @@
+{
+    "app_name": "KSScreenshotManagerExample.app",
+    "bundle_id": "com.ksuther.KSScreenshotManagerExample",
+    "build_config": "Screenshots",
+    "destination_path": "/tmp/screenshots",
+    "devices": [
+        "iPhone 4s",
+        "iPhone 5",
+        "iPhone 6",
+        "iPhone 6 Plus"
+    ],
+    "languages": [
+        "en",
+        "de"
+    ],
+    "project_path": "Example",
+    "scheme_name": "KSScreenshotManagerExample"
+}

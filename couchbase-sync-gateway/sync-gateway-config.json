@@ -1,0 +1,11 @@
+{
+	"log": ["HTTP+"],
+	"databases": {
+		"grocery-sync": {
+			"bucket": "grocery-sync",
+			"users": {
+				"GUEST": {"disabled": false, "admin_channels": ["*"] }
+			}
+		}
+	}
+}

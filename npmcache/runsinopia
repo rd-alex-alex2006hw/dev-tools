@@ -1,0 +1,28 @@
+DATE=$(date)
+CACHE=./cache
+[ ! -z $1 ] && CACHE=$1
+
+npm config del registry;npm config del proxy;npm config del https-proxy
+
+localnpm=$(which sinopia)
+
+[ -z $localnpm ] && npm install -g sinopia
+
+#npm config set proxy http://localhost:3128/
+#npm config set https-proxy http://localhost:3128/
+#npm config set strict-ssl false
+
+#npm set registry https://npm.usertoken.com
+#npm set registry http://127.0.0.1:4873
+echo registry: http://localhost:4873
+mkdir -p $CACHE
+#local-npm -d $CACHE
+
+#echo url-base: https://npm.usertoken.com/_browse
+# using npm.usertoken.com as base
+#local-npm -d $CACHE --url-base https://npm.usertoken.com/
+# sync and base from npm.usertoken.com
+sinopia
+
+
+npm config del registry;npm config del proxy;npm config del https-proxy;npm config del strict-ssl

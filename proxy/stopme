@@ -1,0 +1,7 @@
+DATE=$(date)
+PWD=local-npm
+
+echo $DATE
+ps -ef | grep -v grep | grep $PWD | awk '{ print $2 }' | xargs kill -9
+npm config del registry;npm config del proxy;npm config del https-proxy
+echo "Stopping all processes owned by $PWD ..."
