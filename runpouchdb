@@ -1,0 +1,2 @@
+#npm install -g pouchdb-server
+( mkdir -p ./pouchdb;cd ./pouchdb;pouchdb-server --port 5984 )
