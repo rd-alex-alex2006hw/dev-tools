@@ -4,18 +4,19 @@ CACHE=./cache
 
 npm config del registry;npm config del proxy;npm config del https-proxy
 
-localnpm=$(which npm_lazy)
+#localnpm=$(which npm_lazy)
+localnpm=$(which npm-proxy-cache)
 
-[ -z $localnpm ] && npm install -g npm_lazy
+#[ -z $localnpm ] && npm install -g npm_lazy
+[ -z $localnpm ] && npm install -g npm-proxy-cache
 
-#npm config set proxy http://localhost:3128/
-#npm config set https-proxy http://localhost:3128/
-#npm config set strict-ssl false
-
-#npm set registry https://npm.usertoken.com
-npm set registry http://127.0.0.1:8080
 mkdir -p $CACHE
-npm_lazy --config ./config.js
-
+#npm set registry https://npm.usertoken.com
+npm config set proxy http://localhost:8880/
+npm config set https-proxy http://localhost:8880/
+npm config set strict-ssl false
+#npm set registry http://127.0.0.1:8880
+#npm_lazy --config ./config.js
+npm-proxy-cache -s ./cache -p 8880
 
 npm config del registry;npm config del proxy;npm config del https-proxy;npm config del strict-ssl

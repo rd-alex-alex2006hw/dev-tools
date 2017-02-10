@@ -1,0 +1,23 @@
+DATE=$(date)
+CACHE=./cache
+[ ! -z $1 ] && CACHE=$1
+
+npm config del registry;npm config del proxy;npm config del https-proxy
+
+localnpm=$(which npm_lazy)
+#localnpm=$(which npm-proxy-cache)
+
+#[ -z $localnpm ] && npm install -g npm_lazy
+#[ -z $localnpm ] && npm install -g npm-proxy-cache
+
+#mkdir -p $CACHE
+
+#npm set registry https://npm.usertoken.com
+npm config set proxy http://192.168.0.5:3128/
+npm config set https-proxy http://192.168.0.5:3128/
+#npm-proxy-cache -s ./cache -p 8880
+#npm_lazy --config ./config.js
+npm config set strict-ssl false
+#npm set registry http://192.168.0.5:8080
+
+#npm config del registry;npm config del proxy;npm config del https-proxy;npm config del strict-ssl
