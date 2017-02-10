@@ -1,3 +1,4 @@
 mongodatabase
 rethinkdatabase
 node_modules/
+pouchdb
