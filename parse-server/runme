@@ -4,4 +4,4 @@ server=$(which parse-server)
 
 [ -z $server ] && npm install -g parse-server
 [ -f ./settings ] && source ./settings
-parse-server --port $PARSEPORT --appId $APPID --masterKey $KEY --databaseURI $DB_URI
+parse-server --port 1337 --appId $APP_ID --masterKey $MASTER_KEY --databaseURI $MONGODB_URI
