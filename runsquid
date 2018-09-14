@@ -1,8 +1,15 @@
 /usr/local/sbin/squid -f ./squid.conf
 #tail -f /usr/local/squid/var/logs/access.log
 
-npm config set proxy http://localhost:3128/
-npm config set https-proxy http://localhost:3128/
-npm config set strict-ssl false
+#  npm config set proxy http://localhost:3128/
+#  npm config set https-proxy http://localhost:3128/
+#  npm config set strict-ssl false
+
+#  export ftp_proxy=http://localhost:3128
+#  export http_proxy=http://localhost:3128
+#  export https_proxy=http://localhost:3128
 
 # npm config del registry;npm config del proxy;npm config del https-proxy;npm config del strict-ssl
+# export ftp_proxy=
+# export http_proxy=
+# export https_proxy=

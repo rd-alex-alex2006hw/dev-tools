@@ -1,0 +1,15 @@
+{
+  "name": "dhcpserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "UserToken Admin <admin@usertoken.com> (https://www.usertoken.com)",
+  "license": "ISC",
+  "dependencies": {
+    "dhcp": "^0.2.16"
+  }
+}
