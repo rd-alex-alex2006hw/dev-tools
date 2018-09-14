@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "./node_modules/pm2/bin/pm2 start server.js --env production -i 1 --name dhcp",
+    "logs": "./node_modules/pm2/bin/pm2 logs",
+    "stop": "./node_modules/pm2/bin/pm2 kill"
   },
   "keywords": [],
   "author": "UserToken Admin <admin@usertoken.com> (https://www.usertoken.com)",
   "license": "ISC",
   "dependencies": {
-    "dhcp": "^0.2.16"
+    "dhcp": "^0.2.16",
+    "pm2": "^3.1.2"
   }
 }
