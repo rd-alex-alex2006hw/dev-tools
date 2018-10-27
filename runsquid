@@ -1,5 +1,6 @@
+mkdir -p ./squid/logs
 /usr/local/sbin/squid -f ./squid.conf
-#tail -f /usr/local/squid/var/logs/access.log
+tail -f ./squid/logs/access.log
 
 #  npm config set proxy http://localhost:3128/
 #  npm config set https-proxy http://localhost:3128/
